@@ -1,1 +1,2 @@
-# url_shortner
+# url shortner
+Edit config.php and upload links.sql to database 
