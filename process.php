@@ -19,8 +19,15 @@ if (isset( $_GET['shortcode']) ){
 
 if(isset($_POST['url'])){
 
-    $shortcode = set_shortcode( $_POST['url'] );
-    $short_url = $actual_link.$shortcode;
+    if ( verify_url( $_POST['url']) === false ){
+        
+        echo "Please enter correct url";
+    }else{
+        $shortcode = set_shortcode( $_POST['url'] );
+        $short_url = $actual_link.$shortcode;
+    }
+
+     
 }
 
 
