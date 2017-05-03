@@ -21,7 +21,7 @@ if(isset($_POST['url'])){
 
     if ( verify_url( $_POST['url']) === false ){
         
-        echo "Please enter correct url";
+        $short_url = "Please enter correct url";
     }else{
         $shortcode = set_shortcode( $_POST['url'] );
         $short_url = $actual_link.$shortcode;
